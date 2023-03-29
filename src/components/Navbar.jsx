@@ -43,9 +43,13 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+                        
+                        {/* <Link to='#section_projects' className='nav-links' onClick={closeMobileMenu}>
                             Projects
-                        </Link>
+                        </Link> */}
+                        <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
+                            Projects
+                        </a>
                     </li>
                     <li className="nav-item">
                         <Link to='/exp' className='nav-links' onClick={closeMobileMenu}>

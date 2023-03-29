@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <video src="/assets/videos/video-3.mp4" autoPlay loop muted />
                 <span className='hero--heading small'>Hi, I'm</span>
                 <span className='hero--heading big'>Jemaica Mon</span>
-                <span className='hero--heading role'>Software Engineering / Full-Stack Developer.</span>
+                <span className='hero--heading role'>Full-Stack Developer / Software Engineering</span>
 
 
                 <div className={"hero-btns"}>

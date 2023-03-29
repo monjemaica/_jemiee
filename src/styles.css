@@ -1,15 +1,15 @@
-:root{
+:root {
   --white: #e6f1ff;
+  --test: #182631;
+  --color-headings: #feb902;
+  --grey: #2a2a2a;
 }
-
-
 
 /* NAVBAR */
 
-
 .navbar {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
-  background: #0C151C;
+  background: #0c151c;
   box-shadow: 10px 0 #000000;
   height: 60px;
   display: flex;
@@ -19,7 +19,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  
 }
 
 .navbar-container {
@@ -172,9 +171,6 @@
 /* ************************************END OF NAVBAR******************************************* */
 
 /* BUTTON */
-:root {
-  --primary: var(--white);
-}
 
 .btn {
   padding: 8px 20px;
@@ -185,16 +181,16 @@
 }
 
 .btn--primary {
-  background-color: var(--primary);
+  background-color: var(--white);
   color: #242424;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--white);
 }
 
 .btn--outline {
   background-color: transparent;
   color: var(--white);
   padding: 8px 20px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--white);
   transition: all 0.3s ease-out;
 }
 
@@ -214,7 +210,7 @@
   background: var(--white);
   color: #242424;
   transition: 250ms;
-} 
+}
 
 /* ************************************END OF BUTTON******************************************* */
 
@@ -240,8 +236,8 @@ video {
   object-fit: contain;
 }
 
-.hero--heading{
-  color: var(--white) ;
+.hero--heading {
+  color: var(--white);
   font-weight: 400;
 }
 
@@ -254,16 +250,16 @@ video {
   font-size: 100px;
 }
 
-.role{
+.role {
   margin-left: 18rem;
 }
 
 .hero-container > p {
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--white);
-  
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .hero-btns {
@@ -277,7 +273,6 @@ video {
 .fa-play-circle {
   margin-left: 4px;
 }
-
 
 @media screen and (max-width: 960px) {
   .hero-container > h1 {
@@ -308,18 +303,71 @@ video {
 
 /* ************************************END OF HERO******************************************* */
 
-
 /* SECTION */
-section{
+section {
   margin: 0 auto;
   padding: 100px 0px;
   max-width: 1000px;
-  color: var(--white);  
+  color: var(--white);
   display: block;
 }
 
-/* ABOUT */
-.about--heading{
+/* Headings */
+.heading {
   font-size: 28px;
   font-weight: 600;
+}
+
+/* ABOUT */
+
+.about--paragraph {
+  margin-top: 8px;
+}
+
+/* LISTS */
+
+.list {
+  list-style-type: "▹";
+  padding-left: 0;
+}
+
+li::marker {
+  color: var(--color-headings);
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 25px 0px;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+
+/* CARDS */
+
+.card_container{
+
+}
+
+.card{
+  background-color: var(--test);
+  padding: 4rem;
+  margin: 1rem;
 }
