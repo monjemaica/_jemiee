@@ -5,6 +5,8 @@
   --grey: #2a2a2a;
 }
 
+
+
 /* NAVBAR */
 
 .navbar {
@@ -312,10 +314,14 @@ section {
   display: block;
 }
 
-/* Headings */
+/* TOPOGRAPHY */
 .heading {
   font-size: 28px;
   font-weight: 600;
+}
+
+p{
+  padding: .5rem;
 }
 
 /* ABOUT */
@@ -367,7 +373,63 @@ li::marker {
 }
 
 .card{
-  background-color: var(--test);
-  padding: 4rem;
+  position: relative;
   margin: 1rem;
+  height: 25vh;
+  transition: ease-out 0.3s;
+}
+
+.card > img{
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  object-fit: cover;
+  background: radial-gradient(circle at center, rgb(59, 59, 58), rgb(80, 70, 60) 84%);
+  filter: grayscale(50%);
+}
+
+.card:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  background:none;
+  border: 1px solid var(--color-headings);
+  padding: .5rem;
+}
+
+
+.card_header{
+  color: var(--color-headings);
+  
+}
+
+.card_contents{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 20px;
+  pointer-events: none;
+}
+.card_body{
+  margin-left: 1rem;
+}
+
+/* BADGES */
+
+.badge {
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  margin:.2rem;
+  white-space: nowrap;
+  border: .1px solid var(--color-headings);
+  text-align: end;
+}
+
+.badge--primary {
+  background-color: transparent;
+  color: var(--color-headings);
+}
+
+.badge--small {
+  font-size: 11px;
+  padding: 4px 6px;
 }
