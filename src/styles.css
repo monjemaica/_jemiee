@@ -348,10 +348,13 @@ li::marker {
 
 .list--tick {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
   gap: 0px 10px;
   padding: 0px;
   margin: 20px 25px 0px;
+}
+
+.list--col2{
+  grid-template-columns: repeat(2, minmax(140px, 200px));
 }
 
 .list--tick .list__item {

@@ -1,3 +1,4 @@
+import Content from "../components/Content";
 
 
 const Experience = () => {
@@ -12,7 +13,9 @@ const Experience = () => {
                     <a href="#">test</a>
                     <a href="#">test</a>
                 </div>
-                <div className="content">Content</div>
+                <div className="content">
+                    <Content/>
+                </div>
             </div>
 
         </>
