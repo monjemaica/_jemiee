@@ -5,6 +5,10 @@
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #0C151C;
 }

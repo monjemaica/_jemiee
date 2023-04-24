@@ -1,6 +1,5 @@
 import Content from "../components/Content";
 
-
 const Experience = () => {
     return (
         <>
@@ -13,7 +12,7 @@ const Experience = () => {
                     <a href="#">test</a>
                     <a href="#">test</a>
                 </div>
-                <div className="content">
+                <div className="content">src/components/Content.jsx
                     <Content/>
                 </div>
             </div>

@@ -35,26 +35,21 @@ const Navbar = () => {
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
-
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
-                        <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                        <a href='#section_about' className='nav-links' onClick={closeMobileMenu}>
                             About
-                        </Link>
+                        </a>
                     </li>
                     <li className="nav-item">
-                        
-                        {/* <Link to='#section_projects' className='nav-links' onClick={closeMobileMenu}>
-                            Projects
-                        </Link> */}
                         <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
                             Projects
                         </a>
                     </li>
                     <li className="nav-item">
-                        <Link to='/exp' className='nav-links' onClick={closeMobileMenu}>
+                    <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
                             Experience
-                        </Link>
+                        </a>
                     </li>
                 </ul>
 

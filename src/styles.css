@@ -217,18 +217,20 @@
 /* ************************************END OF BUTTON******************************************* */
 
 /* HERO */
+#section_header{
+  position: relative;
+}
 
 video {
+  position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  position: fixed;
   z-index: -1;
 }
 
 .hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -306,12 +308,13 @@ video {
 /* ************************************END OF HERO******************************************* */
 
 /* SECTION */
-section {
+#section_about, #section_projects, #section_experience{
   margin: 0 auto;
   padding: 100px 0px;
   max-width: 1000px;
   color: var(--white);
   display: block;
+  transition: all 500ms ease-in-out;
 }
 
 /* TOPOGRAPHY */
