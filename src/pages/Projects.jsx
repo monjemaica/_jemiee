@@ -13,8 +13,8 @@ const Projects = () => {
                         </header>
                         <div className="card_body">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
-                            <span class="badge badge--primary badge--small">ReactJs</span>
-                            <span class="badge badge--primary badge--small">MongoDB</span>
+                            <span className="badge badge--primary badge--small">ReactJs</span>
+                            <span className="badge badge--primary badge--small">MongoDB</span>
                         </div>
                     </div>
                 </div>
@@ -28,8 +28,8 @@ const Projects = () => {
                         </header>
                         <div className="card_body">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
-                            <span class="badge badge--primary badge--small">ReactJs</span>
-                            <span class="badge badge--primary badge--small">MongoDB</span>
+                            <span className="badge badge--primary badge--small">ReactJs</span>
+                            <span className="badge badge--primary badge--small">MongoDB</span>
                         </div>
                     </div>
                 </div>

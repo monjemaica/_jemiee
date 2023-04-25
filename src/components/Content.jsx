@@ -2,20 +2,24 @@ import React from 'react';
 import '../App.css';
 import '../styles.css';
 
-const Content = () => {
+const Content = ({ exp }) => {
     return (
         <>
-            <div className="content--container">
-                <div className="content--header">Company</div>
-                <div className='contet--date'>April 2018 - Present</div>
 
-                <ul class="list list--tick">
-                    <li class="list__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eveniet dolore at accusamus. Vitae magni velit harum corrupti veniam ratione.</li>
-                    <li class="list__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestias accusantium error debitis facere, saepe, omnis maiores voluptatibus commodi incidunt quam? Aut dolor cupiditate nisi voluptatem eum sapiente omnis quo.</li>
-                    <li class="list__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates placeat adipisci velit maiores qui accusamus.</li>
-                </ul>
+            {exp.map((res, i )=> 
+                <div key={i} className="content--container">
+                    <div className="img"></div>
+                    <div className="content--header">{res.company}</div>
+                    <div className='content--date'>{res.duration}</div>
 
-            </div>
+                    <ul className="content--desc list list--tick">
+                        {res.description.map((desc, i )=> 
+                            <li key={i} className="list__item">{desc}</li>
+                        )}
+                    </ul>
+
+                </div>
+            )}
         </>
     );
 }

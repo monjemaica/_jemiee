@@ -15,13 +15,13 @@ const About = () => {
             <p className="about--paragraph">
                 Here are a few Programming Language/ Frameworks I've been working with recently:
             </p>
-            <ul class="list list--tick list--col2">
-                <li class="list__item">JavaScript</li>
-                <li class="list__item">ReactJs</li>
-                <li class="list__item">Node.js</li>
-                <li class="list__item">Laravel</li>
-                <li class="list__item">Angular</li>
-                <li class="list__item">Ionic</li>
+            <ul className="list list--tick list--col2">
+                <li className="list__item">JavaScript</li>
+                <li className="list__item">ReactJs</li>
+                <li className="list__item">Node.js</li>
+                <li className="list__item">Laravel</li>
+                <li className="list__item">Angular</li>
+                <li className="list__item">Ionic</li>
             </ul>
 
         </>
