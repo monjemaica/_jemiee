@@ -8,7 +8,6 @@ const Content = ({ exp }) => {
 
             {exp.map((res, i )=> 
                 <div key={i} className="content--container">
-                    <div className="img"></div>
                     <div className="content--header">{res.company}</div>
                     <div className='content--date'>{res.duration}</div>
 

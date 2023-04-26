@@ -330,6 +330,11 @@ video {
 .heading {
   font-size: var(--fz-xxl);
   font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.left-align{
+  text-align: right;
 }
 
 p {
@@ -362,7 +367,7 @@ li::marker {
   display: grid;
   gap: 0px 10px;
   padding: 0px;
-  margin: 20px 25px 0px;
+  margin: 20px 20px 0px;
 }
 
 .list--col2{
@@ -458,13 +463,13 @@ li::marker {
 
 .list-group {
   height: 100%;
-  width: 30%;
-  border-left: solid 2px var(--light-headings);
+  width: 10%;
+  border-right: solid 2px var(--light-headings);
 }
 .list-group .list--item {
   display: block;
   padding:  16px 18px;
-  font-size: 16px;
+  font-size: var(--fz-xs);
   text-decoration: none;
   transition: all 500ms ease-in-out;
   cursor: pointer;
@@ -478,20 +483,20 @@ li::marker {
 .active{
   color: var(--primary-accent);
   background-color: var(--light-headings);
-  border-left: solid 2px var(--primary-accent);
+  border-right: solid 2px var(--primary-accent);
 }
 
+
+
+/* CONTENT */
 
 .content {
   font-size: 18px;
   height: auto;
   width: 100%;
-  padding: 0.5rem 1.2rem;
+  padding: 0 1.2rem;
   transition: all 500ms ease;
 }
-
-/* CONTENT */
-
 .content--header{
   font-size: var(--fz-xl);
   font-weight:550;
@@ -504,4 +509,40 @@ li::marker {
 
 .content--desc{
   font-size: var(--fz-sm);
+}
+
+
+/* IMG STYLES*/
+
+.square--container{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  transition: 1s;
+}
+
+.square--img{
+  flex: 1 1 35rem; 
+  /*flex-grow /flex-shrink/ flex-basis*/
+}
+
+.square--img > img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  background: radial-gradient(
+    circle at center,
+    rgb(59, 59, 58),
+    rgb(80, 70, 60) 84%
+  );
+  filter: grayscale(50%);
+}
+
+.square--container:hover{
+  width: 100vh;
+  transition: 1s;
+  padding: .5rem;
+  border: 0.1px solid var(--primary-accent);
 }
