@@ -462,9 +462,9 @@ li::marker {
 }
 
 .list-group {
-  height: 100%;
-  width: 10%;
-  border-right: solid 2px var(--light-headings);
+  height: auto;
+  width: 9vw;
+  border-left: solid 2px var(--light-headings);
 }
 .list-group .list--item {
   display: block;
@@ -483,7 +483,7 @@ li::marker {
 .active{
   color: var(--primary-accent);
   background-color: var(--light-headings);
-  border-right: solid 2px var(--primary-accent);
+  border-left: solid 2px var(--primary-accent);
 }
 
 
@@ -493,7 +493,7 @@ li::marker {
 .content {
   font-size: 18px;
   height: auto;
-  width: 100%;
+  width: 40vw;
   padding: 0 1.2rem;
   transition: all 500ms ease;
 }
@@ -541,7 +541,7 @@ li::marker {
 }
 
 .square--container:hover{
-  width: 100vh;
+  width: 50%;
   transition: 1s;
   padding: .5rem;
   border: 0.1px solid var(--primary-accent);
