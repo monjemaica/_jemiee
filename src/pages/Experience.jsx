@@ -5,7 +5,12 @@ const Experience = ({ exp, onSelected, isActive }) => {
 
     return (
         <>
-            <div className="heading">Experience</div>
+            <div className="separator">
+                <span className="heading--no">03.&nbsp;</span> 
+                <span className="heading">
+                    Experience
+                </span>
+            </div>
             <div className="box-container">
                 <div>
                     <ul className="list-group">

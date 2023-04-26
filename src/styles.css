@@ -330,7 +330,37 @@ video {
 .heading {
   font-size: var(--fz-xxl);
   font-weight: 600;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 0;
+}
+
+.heading--no{
+  font-size: var(--fz-lg);
+  color: var(--primary-accent);
+}
+
+.heading--numbered{
+  display: inline;
+}
+
+.separator {
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+
+}
+
+.separator::after{
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--light-headings);
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .50em;
 }
 
 .left-align{
@@ -339,6 +369,14 @@ video {
 
 p {
   padding: 0.5rem;
+}
+
+hr {
+  position: relative;
+  border: none;
+  height: 1px;
+  color: var(--light-headings);
+  background-color: var(--light-headings);
 }
 
 /* ABOUT */

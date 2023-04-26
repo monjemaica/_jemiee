@@ -2,7 +2,12 @@
 const About = () => {
     return (
         <>
-            <div className="heading regular"> About Me</div>
+            <div className="separator">
+                <span className="heading--no">01. &nbsp;</span>
+                <span className="heading">
+                    About
+                </span>
+            </div>
             <p className="about--paragraph">
                 Mabuhay! I'm Jem, a passionate and dedicated Full-Stack developer that build things in internet
                 based in Olongapo City, Philippines. I have developed many types of API development, Websites and

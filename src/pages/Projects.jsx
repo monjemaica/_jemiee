@@ -1,10 +1,15 @@
 const Projects = () => {
     return (
         <>
-            <div className="heading">Projects</div>
+            <div className="separator">
+                <span className="heading--no">02. &nbsp;</span>
+                <span className="heading">
+                    Projects
+                </span>
+            </div>
             <div className="card_container">
                 <div className="card">
-                    
+
                     <img src="../assets/images/img-9.jpg" alt="" />
                     <div className="card_contents">
 
@@ -19,7 +24,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="card">
-                    
+
                     <img src="../assets/images/img-9.jpg" alt="" />
                     <div className="card_contents">
 
@@ -33,7 +38,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-               
+
 
             </div>
 
