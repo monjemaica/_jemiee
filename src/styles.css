@@ -1,9 +1,13 @@
 :root {
   --white: #e6f1ff;
-  --grey: #2a2a2a;
+  /* --grey: #2a2a2a; */
+  --grey: #5B666E;
+  /* --primary-accent: #EC9E3D; */
   --primary-accent: #feb902;
   --secondary-accent: #182631;
-  --light-headings: #182631;
+  --secondary-accent: #182631;
+  /* --light-headings: #182631; */
+  --light-headings: #152C3A;
 
   --fz-xxs: .8rem;
   --fz-xs: .9rem;
@@ -19,7 +23,8 @@
 
 .navbar {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
-  background: #0c151c;
+  /* background: #0c151c; */
+  background: #112432;
   box-shadow: 10px 0 #000000;
   height: 60px;
   display: flex;
@@ -352,7 +357,7 @@ video {
 .separator::after{
   content: '';
   flex: 1;
-  border-bottom: 1px solid var(--light-headings);
+  border-bottom: 1px solid var(--grey);
 }
 
 .separator:not(:empty)::before {
@@ -375,8 +380,8 @@ hr {
   position: relative;
   border: none;
   height: 1px;
-  color: var(--light-headings);
-  background-color: var(--light-headings);
+  color: var(--primary-accent);
+  background-color: var(--primary-accent);
 }
 
 /* ABOUT */
