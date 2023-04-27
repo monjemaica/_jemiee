@@ -1,11 +1,10 @@
 :root {
-  --white: #e6f1ff;
+  --white: #d3e0f0;
   /* --grey: #2a2a2a; */
   --grey: #5B666E;
   /* --primary-accent: #EC9E3D; */
   --primary-accent: #feb902;
-  --secondary-accent: #182631;
-  --secondary-accent: #182631;
+  --secondary-accent: #adbdc9;
   /* --light-headings: #182631; */
   --light-headings: #152C3A;
 
@@ -374,6 +373,7 @@ video {
 
 p {
   padding: 0.5rem;
+  color: var(--secondary-accent);
 }
 
 hr {
@@ -394,7 +394,7 @@ hr {
 
 .list {
   list-style-type: "▹";
-  font-size: var(--fz-md);
+  font-size: var(--fz-xs);  color: var(--secondary-accent);
 }
 
 li::marker {
@@ -508,6 +508,7 @@ li::marker {
   height: auto;
   width: 9vw;
   border-left: solid 2px var(--light-headings);
+  color: var(--secondary-accent);
 }
 .list-group .list--item {
   display: block;
@@ -548,10 +549,12 @@ li::marker {
 
 .content--date{
   font-size: var(--fz-xs);
+  color: var(--secondary-accent);
 }
 
 .content--desc{
   font-size: var(--fz-sm);
+  color: var(--secondary-accent);
 }
 
 
