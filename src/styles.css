@@ -386,8 +386,16 @@ hr {
 
 /* ABOUT */
 
+.about--content{
+  width: 80%;
+}
+
 .about--paragraph {
   margin-top: 8px;
+}
+
+.about--img{
+  flex: 1 1 35rem; 
 }
 
 /* LISTS */
@@ -497,12 +505,14 @@ li::marker {
   padding: 4px 6px;
 }
 
-/* SIDEBAR */
+/* CONTAINER */
 
 .box-container {
   display: flex;
   padding-top: 1rem;
 }
+
+/* SIDEBAR */
 
 .list-group {
   height: auto;
@@ -565,7 +575,18 @@ li::marker {
   flex-direction: column;
   width: 25%;
   height: 100%;
-  transition: 1s;
+  transition: 2s;
+  padding-right: 1rem;
+}
+
+.img--sm{
+  width: 15%;
+}
+.img--md{
+  width: 25%;
+}
+.img--lg{
+  width: 40%;
 }
 
 .square--img{
@@ -588,7 +609,12 @@ li::marker {
 
 .square--container:hover{
   width: 50%;
-  transition: 1s;
+  transition: 2s;
   padding: .5rem;
+  margin-right: 1rem;
   border: 0.1px solid var(--primary-accent);
+}
+.square--img > img:hover{
+  filter: none;
+  transition: 1s;
 }
