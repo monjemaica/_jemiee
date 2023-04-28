@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from './Button';
 import '../styles.css';
+import { MouseContext } from '../context/MouseContextProvider';
 
 const Navbar = () => {
+    const { cursorChangeHandler } = useContext(MouseContext);
+
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -21,33 +24,40 @@ const Navbar = () => {
     useEffect(() => {
         showButton();
     }, []);
-    
+
     window.addEventListener('resize', showButton);
 
     return (
         <>
             <nav className="navbar">
-                <div className="navbar-container">
+                <div className="navbar-container" onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}>
+
                     <Link to="/" className={"navbar-logo"}>
                         <i className="fab fa-typo3"></i>
                     </Link>
                 </div>
-                <div className="menu-icon" onClick={handleClick}>
+                <div className="menu-icon" onClick={handleClick} onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
-                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className="nav-item">
+                <ul className={click ? 'nav-menu active' : 'nav-menu'} onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}>
+                    <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
                         <a href='#section_about' className='nav-links' onClick={closeMobileMenu}>
                             About
                         </a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
                         <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
                             Projects
                         </a>
                     </li>
-                    <li className="nav-item">
-                    <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
+                    <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
+                        <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
                             Experience
                         </a>
                     </li>

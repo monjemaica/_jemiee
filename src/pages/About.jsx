@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { MouseContext } from "../context/MouseContextProvider";
 
 const About = () => {
+    const { cursorChangeHandler } = useContext(MouseContext);
     return (
         <>
             <div className="box-container ">
-                <div className="square--container img--sm">
+                <div className="square--container img--sm" onMouseEnter={() => cursorChangeHandler("hovered")} onMouseLeave={() => cursorChangeHandler("")}>
                     <div className="square--img">
                         <img src="../assets/images/img-dp.jpg" alt="" />
                     </div>

@@ -5,6 +5,7 @@
   /* --primary-accent: #EC9E3D; */
   --primary-accent: #feb902;
   --secondary-accent: #adbdc9;
+  --secondary-accent-light: #adbdc959;
   /* --light-headings: #182631; */
   --light-headings: #152C3A;
 
@@ -18,6 +19,49 @@
   --fz-heading: 2.5rem;
 }
 
+/* CURSOR */
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  /* background-color: var(--white); */
+  border: 1px solid var(--secondary-accent-light);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 999;
+  pointer-events: none;
+}
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: var(--secondary-accent-light);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+/* below code is used from step6 */
+ .ring.hovered {
+   width: 80px;
+   height: 80px;
+   border-width: 3px;
+   border: 1px solid var(--primary-accent);
+ }
+
+ .dot.hovered{
+  background-color: var(--primary-accent);
+ }
+ 
 /* NAVBAR */
 
 .navbar {

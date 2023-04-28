@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import Content from "../components/Content";
+import { MouseContext } from "../context/MouseContextProvider";
 import { getCompany } from "../services/companyData";
 
 const Experience = ({ exp, onSelected, isActive }) => {
+    const { cursorChangeHandler } = useContext(MouseContext);
 
     return (
         <>
             <div className="separator">
-                <span className="heading--no">03.&nbsp;</span> 
+                <span className="heading--no">03.&nbsp;</span>
                 <span className="heading">
                     Experience
                 </span>
@@ -15,7 +18,8 @@ const Experience = ({ exp, onSelected, isActive }) => {
                 <div>
                     <ul className="list-group">
                         {getCompany().map(e =>
-                            <li key={e.id} onClick={() => onSelected(e.id)} className={isActive === e.id ? "list--item active" : "list--item"}>
+                            <li key={e.id} onClick={() => onSelected(e.id)} className={isActive === e.id ? "list--item active" : "list--item"} onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}>
                                 {e.company}
                             </li>
                         )}
@@ -26,7 +30,8 @@ const Experience = ({ exp, onSelected, isActive }) => {
                 </div>
 
                 <div className="square--container">
-                    <div className="square--img">
+                    <div className="square--img" onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
                         {exp.map(res =>
                             <img src={res.img} alt="" />
                         )}

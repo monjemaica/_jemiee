@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { MouseContext } from "../context/MouseContextProvider";
+
 const Projects = () => {
+    const { cursorChangeHandler } = useContext(MouseContext);
     return (
         <>
             <div className="separator">
@@ -8,7 +12,8 @@ const Projects = () => {
                 </span>
             </div>
             <div className="card_container">
-                <div className="card">
+                <div className="card" onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("")}>
 
                     <img src="../assets/images/img-9.jpg" alt="" />
                     <div className="card_contents">
@@ -23,7 +28,8 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card" onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("")}>
 
                     <img src="../assets/images/img-9.jpg" alt="" />
                     <div className="card_contents">
