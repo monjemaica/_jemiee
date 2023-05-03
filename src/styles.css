@@ -9,6 +9,7 @@
   /* --light-headings: #182631; */
   --light-headings: #152C3A;
 
+  --fz-xxxs: .6rem;
   --fz-xxs: .8rem;
   --fz-xs: .9rem;
   --fz-sm: 1rem;
@@ -301,6 +302,21 @@
   box-shadow: inset 0 0 0 1000px rgba(254, 187, 2, 0.041);
 }
 
+.ref > a{
+  display: none;
+}
+
+.hero-container:hover .ref > a{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  color: var(--secondary-accent);
+  font-size: var(--fz-xxs);
+  opacity: .5;
+}
+
 .hero--heading {
   color: var(--white);
   font-weight: 400;
@@ -318,6 +334,8 @@
 .role {
   margin-left: 18rem;
 }
+
+
 
 .hero-container > p {
   margin-top: 10px;
@@ -407,6 +425,13 @@
   border-bottom: 1px solid var(--grey);
 }
 
+.x2::before{
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--grey);
+}
+
+
 .separator:not(:empty)::before {
   margin-right: .25em;
 }
@@ -430,6 +455,13 @@ hr {
   height: 1px;
   color: var(--primary-accent);
   background-color: var(--primary-accent);
+}
+
+.pd-1{
+  padding: 1rem 0 ;
+}
+.pd-2{
+  padding: 1.5rem 0 ;
 }
 
 /* ABOUT */
@@ -657,6 +689,7 @@ li::marker {
 
 .square--container:hover{
   width: 50%;
+  height: 50%;
   transition: 2s;
   padding: .5rem;
   margin-right: 1rem;
@@ -666,3 +699,36 @@ li::marker {
   filter: none;
   transition: 1s;
 }
+
+/* FOOTER */
+.footer{
+  margin: 15rem 0 1.5rem 0rem;
+  text-align: center;
+  color: var(--secondary-accent);
+}
+
+.footer--text{
+  padding: 0 5rem;
+}
+
+.sm{
+  font-size: var(--fz-xxs);
+}
+
+.footer--xxs{
+  font-size: var(--fz-xxxs);
+  padding-top: .5rem;
+}
+
+.links > a{
+  padding: .5rem;
+  height: 50;
+  color: var(--secondary-accent);
+  text-decoration: none;
+}
+
+.links > a:hover{
+  color: var(--primary-accent);
+}
+
+

@@ -4,6 +4,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import { getExp } from "../services/experienceData";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -48,6 +49,7 @@ const Home = () => {
             <section id="section_experience">
                 <Experience exp = {filter} onSelected = {handleOnSelected} isActive={active}/>
             </section>
+            <Footer />
         </>
     );
 }
