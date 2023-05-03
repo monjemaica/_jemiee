@@ -6,7 +6,7 @@ const About = () => {
     return (
         <>
             <div className="box-container ">
-                <div className="square--container img--sm" onMouseEnter={() => cursorChangeHandler("hovered")} onMouseLeave={() => cursorChangeHandler("")}>
+                <div className="square--container img--md" onMouseEnter={() => cursorChangeHandler("hovered")} onMouseLeave={() => cursorChangeHandler("")}>
                     <div className="square--img">
                         <img src="../assets/images/img-dp.jpg" alt="" />
                     </div>

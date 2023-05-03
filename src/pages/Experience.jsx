@@ -29,7 +29,7 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     <Content exp={exp} />
                 </div>
 
-                <div className="square--container">
+                <div className="square--container img--lg">
                     <div className="square--img" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
                         {exp.map(res =>
