@@ -297,7 +297,6 @@
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
-  border: white 1px solid;
 }
 .hero-container:hover {
   box-shadow: inset 0 0 0 1000px rgba(254, 187, 2, 0.041);
@@ -613,12 +612,23 @@ li::marker {
 .box-container {
   display: flex;
   padding-top: 1rem;
-  border: 1px solid white;
 }
 .content-container {
   display: flex;
   padding-top: 1rem;
-  border: 1px solid white;
+}
+
+.grid-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container{
+    grid-template-columns: none;
+    grid-template-rows: auto;
+  }
 }
 
 /* SIDEBAR */
@@ -629,10 +639,10 @@ li::marker {
   color: var(--secondary-accent);
 }
 .list-group .list--item {
-  display: block;
+  width: 100%;
   padding: 16px 18px;
   font-size: var(--fz-xs);
-  text-decoration: none;
+  list-style-type: none;
   transition: all 500ms ease-in-out;
   cursor: pointer;
 }
@@ -647,17 +657,44 @@ li::marker {
   background-color: var(--light-headings);
   border-left: solid 2px var(--primary-accent);
 }
+@media screen and (max-width: 768px) {
+  .list-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .list-group .list--item{
+    text-align: center;
+  }
+
+  .list-group .list--item:hover {
+    border-left: none;
+    border-bottom: solid 3px var(--light-headings);
+  }
+
+  .active {
+    background-color: var(--light-headings);
+    border-left: none;
+    border-bottom: solid 2px var(--primary-accent);
+  }
+}
 
 /* CONTENT */
 
-.content {
+.content--container {
+  display: grid;
+  grid-template: 2fr 1fr;
+  grid-auto-flow: column;
   font-size: 18px;
   height: auto;
-  width: 50%;
-  padding: 0 1.2rem;
-  margin: 0 4rem;
+  padding:1rem 1.2rem;
   transition: all 500ms ease;
 }
+
+.content--details{
+  
+}
+
 .content--header {
   font-size: var(--fz-xl);
   font-weight: 550;
@@ -674,14 +711,37 @@ li::marker {
   color: var(--secondary-accent);
 }
 
+.content--img{
+  display: grid;
+  grid-template: auto;
+  grid-auto-flow: row;
+  height: 100%;
+  gap: 10px;
+}
+
+.content--img > img{
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .content--container {
+    grid-auto-flow: row;
+  }
+
+  .content--img{
+    width: 100%;
+    grid-auto-flow: column;
+  }
+}
+
+
+
 /* IMG STYLES*/
 
 .square--container {
-  border: 1px white solid;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 100%;
   transition: 2s;
   padding-right: 1rem;
 }

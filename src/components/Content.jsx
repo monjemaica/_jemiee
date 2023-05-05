@@ -5,9 +5,9 @@ import '../styles.css';
 const Content = ({ exp }) => {
     return (
         <>
-
+    
             {exp.map((res, i )=> 
-                <div key={i} className="content--container">
+                <div key={i}>
                     <div className="content--header">{res.company}</div>
                     <div className='content--date'>{res.duration}</div>
 
