@@ -12,7 +12,7 @@ const Projects = () => {
                 </span>
             </div>
             <div className="card_container">
-                <div className="card" onMouseEnter={() => cursorChangeHandler("hovered")}
+                <div className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}>
 
                     <img src="../assets/images/img-9.jpg" alt="" />
@@ -26,6 +26,8 @@ const Projects = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
                             <div className="badge--container">
                                 <span className="badge badge--primary badge--small">ReactJs</span>
+                                <span className="badge badge--primary badge--small">MongoDB</span>
+                                <span className="badge badge--primary badge--small">MongoDB</span>
                                 <span className="badge badge--primary badge--small">MongoDB</span>
                             </div>
                         </div>

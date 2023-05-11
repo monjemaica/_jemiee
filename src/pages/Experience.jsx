@@ -14,7 +14,7 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     Experience
                 </span>
             </div>
-            <div className="grid-container">
+            <div className="grid-container grid-1">
                 <div>
                     <ul className="list-group">
                         {getCompany().map(e =>
