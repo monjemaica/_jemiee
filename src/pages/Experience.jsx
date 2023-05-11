@@ -32,12 +32,11 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     
                     <div className="content--img-container">
                         <div className="content--img">
-                           <img src="../assets/images/img-10.jpg" alt="" />
-                           <img src="../assets/images/img-10.jpg" alt="" />
-                           <img src="../assets/images/img-10.jpg" alt="" />
-                            {/* {exp.map(res =>
-                                <img src={res.img} alt="" />
-                            )} */}
+                            {exp.map(res =>
+                                res.img.map((img, i) => 
+                                    <img key={i} src={img} alt="" />
+                                )
+                            )}
                         </div>
                     </div>
                 </div>

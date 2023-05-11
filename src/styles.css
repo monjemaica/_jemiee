@@ -683,7 +683,7 @@ li::marker {
 
 .content--container {
   display: grid;
-  grid-template: 2fr 1fr;
+  grid-template: fit-content(100px) / fit-content(70%) fit-content(30%);
   grid-auto-flow: column;
   font-size: 18px;
   height: auto;
@@ -716,17 +716,20 @@ li::marker {
   grid-template: auto;
   grid-auto-flow: row;
   height: 100%;
+  width: 100%;
   gap: 10px;
 }
 
 .content--img > img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
   .content--container {
     grid-auto-flow: row;
+    grid-template: fit-content(100px) / fit-content(100%);
   }
 
   .content--img{

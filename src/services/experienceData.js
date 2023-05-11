@@ -10,21 +10,33 @@ export const exps = [
     "Developing API development and automations using PHP and MySQL."
     ],
     duration: "August - Present",
-    img: "../assets/images/img-10.jpg"
+    img: [
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg"
+    ]
   },
   {
     id: "f4cce117-5f69-46f5-9037-ab541edd732e",
     company: "Gordon College",
     description: ["Part-time instructor teaching Computer Programming."],
     duration: "August - Present",
-    img: "../assets/images/img-6.jpg"
+    img: [
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg",
+    ]
   },
   {
     id: "09ff2d76-e177-4227-b9b5-47f1cd826d0e",
     company: "Easypos Solution Inc.",
     description: ["Completing 400 hours OJT as an Android Mobile Dev."],
     duration: "March - June 2022",
-    img: "../assets/images/img-8.jpg"
+    img: [
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg",
+      "../assets/images/img-10.jpg",
+    ]
   },
 ];
 
