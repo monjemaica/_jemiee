@@ -8,9 +8,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="links">
-                    <a href="/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="/"><i class="fa-brands fa-github"></i></a>
+                    <a href="/"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="/"><i className="fa-brands fa-linkedin-in"></i></a>
+                    <a href="/"><i className="fa-brands fa-github"></i></a>
                     {/* <img src="../assets/images/facebook.png" alt="" />
                     <img src="../assets/images/linkedin.png" alt="" />
                     <img src="../assets/images/social.png" alt="" /> */}

@@ -1,4 +1,5 @@
 :root {
+  --bg:#112432;
   --white: #d3e0f0;
   /* --grey: #2a2a2a; */
   --grey: #5b666e;
@@ -440,9 +441,14 @@
   text-align: right;
 }
 
+h1,h2,h3{
+  color: var(--white);
+  padding: .2rem 0;
+}
+
 p {
-  padding: 0.5rem;
   color: var(--secondary-accent);
+  font-size: var(--fz-sm);
 }
 
 hr {
@@ -548,6 +554,7 @@ li::marker {
 
 .card_header {
   color: var(--primary-accent);
+  margin-bottom: 1rem;
 }
 
 .card_contents {
@@ -557,9 +564,16 @@ li::marker {
   padding: 20px;
   pointer-events: none;
 }
+
 .card_body {
-  margin-left: 1rem;
+
 }
+
+/* .card_body p{
+  border-radius: 5px;
+  padding: 1rem;
+  background: var(--light-headings);
+} */
 
 
 @media screen and (max-width: 768px) {
@@ -585,13 +599,13 @@ li::marker {
 /* BADGES */
 
 .badge--container{
-  padding: .4rem;
+  margin: 1.5rem 0;
 }
 
 .badge {
   border-radius: 20px;
-  padding: 0.5rem 2rem;
-  margin: 0.2rem;
+  /* padding: 0.5rem 2rem; */
+  margin-right: 0.5rem;
   white-space: nowrap;
   border: 0.1px solid var(--primary-accent);
   text-align: end;
