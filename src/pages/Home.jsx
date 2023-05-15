@@ -5,10 +5,12 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import { getExp } from "../services/experienceData";
 import Footer from "../components/Footer";
+import { getProject } from "../services/projectData";
 
 
 const Home = () => {
     const [exp, setExp] = useState([]);
+    const [prj, setPrj] = useState([]);
     const [filter, setFilter] = useState([getExp()[0]]);
     const [active, setActive] = useState("9d384aae-4f79-4f82-8034-0e77f84a115e");
     
@@ -28,9 +30,13 @@ const Home = () => {
             const res = await getExp()
             setExp(res);
         }
+        const doGetPrj = async() => {
+            const res = await getProject();
+            setPrj(res);
+        }
         
         doGetExp();
-
+        doGetPrj();
     }, [])
     
     return (
@@ -43,7 +49,7 @@ const Home = () => {
             </section>
 
             <section id="section_projects">
-                <Projects />
+                <Projects prj={prj} />
             </section>
 
             <section id="section_experience">

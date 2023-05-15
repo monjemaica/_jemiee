@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContextProvider";
 
-const Projects = () => {
+const Projects = ({ prj }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
+
     return (
         <>
             <div className="separator">
@@ -11,31 +12,36 @@ const Projects = () => {
                     Projects
                 </span>
             </div>
-            <div className="card_container">
-                <div className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
-          onMouseLeave={() => cursorChangeHandler("")}>
 
-                    <img src="../assets/images/img-9.jpg" alt="" />
-                    <div className="card_contents">
+                <div className="card_container">
+            {prj.map(p =>
+                    <div className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
 
-                        <div className="card_header">
-                            Featured Project
-                            <h2>Project Name</h2>
-                        </div>
-                        <div className="card_body">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
-                            <div className="badge--container">
-                                <span className="badge badge--primary badge--small">ReactJs</span>
-                                <span className="badge badge--primary badge--small">MongoDB</span>
-                                <span className="badge badge--primary badge--small">MongoDB</span>
-                                <span className="badge badge--primary badge--small">MongoDB</span>
+                        <img src={p.img} alt=""/>
+                        <div className="card_contents">
+
+                            <div className="card_header">
+                                {p.header}
+                                <h2>{p.project}</h2>
+                            </div>
+                            <div className="card_body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
+                                <div className="badge--container">
+                                    <span className="badge badge--primary badge--small">ReactJs</span>
+                                    <span className="badge badge--primary badge--small">MongoDB</span>
+                                    <span className="badge badge--primary badge--small">MongoDB</span>
+                                    <span className="badge badge--primary badge--small">MongoDB</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+            )}
                 </div>
+               
 
 
-            </div>
 
         </>
     );
