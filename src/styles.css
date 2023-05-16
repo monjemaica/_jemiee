@@ -238,12 +238,12 @@
   border-radius: 2px;
   outline: none;
   border: none;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn--primary {
   background-color: var(--primary-accent);
-  color: #242424;
+  color: var(--bg);
   border: 1px solid var(--primary-accent);
 }
 
@@ -464,7 +464,7 @@ hr {
   padding: 1rem 0;
 }
 .pd-2 {
-  padding: 1.5rem 0;
+  padding-top: 5rem ;
 }
 
 /* ABOUT */
@@ -557,21 +557,18 @@ li::marker {
   transition: 100ms;
 }
 
-.card:hover .card>img{
-  opacity: 1;
-  filter: grayscale(0%);
-  background: none;
-}
 
 .card:hover{
   border: 1px solid var(--primary-accent);
   padding: 1rem;
 }
-/* .card > img:hover{
+  
+.card:hover img{
   filter: grayscale(0%);
   background: none;
   opacity: 1;
-} */
+  
+}
 
 .card_header {
   color: var(--primary-accent);

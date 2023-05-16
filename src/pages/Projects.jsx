@@ -26,12 +26,11 @@ const Projects = ({ prj }) => {
                                 <h2>{p.project}</h2>
                             </div>
                             <div className="card_body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam laborum dolor minima soluta delectus perspiciatis dolore perferendis ea animi?</p>
+                                <p>{p.description}</p>
                                 <div className="badge--container">
-                                    <span className="badge badge--primary badge--small">ReactJs</span>
-                                    <span className="badge badge--primary badge--small">MongoDB</span>
-                                    <span className="badge badge--primary badge--small">MongoDB</span>
-                                    <span className="badge badge--primary badge--small">MongoDB</span>
+                                    {p.badge.map((b, i) => 
+                                        <span key={i} className="badge badge--primary badge--small">{b}</span>
+                                    )}
                                 </div>
                             </div>
                         </div>

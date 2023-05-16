@@ -11,9 +11,9 @@ export const exps = [
     ],
     duration: "August - Present",
     img: [
-      "../assets/images/img-10.jpg",
-      "../assets/images/img-10.jpg",
-      "../assets/images/img-10.jpg"
+      "../assets/images/dunbrae1.jpg",
+      "../assets/images/dunbrae2.jpg",
+      "../assets/images/dunbrae3.jpg"
     ]
   },
   {

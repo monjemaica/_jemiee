@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from './Button';
 import '../styles.css';
 import { MouseContext } from '../context/MouseContextProvider';
 
@@ -8,24 +7,14 @@ const Navbar = () => {
     const { cursorChangeHandler } = useContext(MouseContext);
 
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    }
 
     useEffect(() => {
-        showButton();
+    
     }, []);
-
-    window.addEventListener('resize', showButton);
 
     return (
         <>
@@ -63,7 +52,9 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                {button && <Button buttonStyle="btn--outline"> Resume</Button>}
+                {/* {button && <Button buttonStyle="btn--outline" download="test.png"> Resume</Button>} */}
+                <a href='/assets/resume/Jemaica Mae Mon - Resume.pdf' className="btn btn--outline btn--medium" download="Jemaica Mae Mon - Resume.pdf"> Resume</a>
+
 
             </nav>
         </>
