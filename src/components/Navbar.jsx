@@ -23,7 +23,7 @@ const Navbar = () => {
                     onMouseLeave={() => cursorChangeHandler("")}>
 
                     <Link to="/" className={"navbar-logo"}>
-                        <i className="fab fa-typo3"></i>
+                    <i class="fa-solid fa-code"></i>
                     </Link>
                 </div>
                 <div className="menu-icon" onClick={handleClick} onMouseEnter={() => cursorChangeHandler("hovered")}
