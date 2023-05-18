@@ -21,6 +21,8 @@
   --fz-heading: 2.5rem;
 }
 
+
+
 /* CURSOR */
 .ring {
   position: fixed;
@@ -116,9 +118,6 @@
   margin-right: 2rem;
 }
 
-.nav-item {
-  height: 60px;
-}
 
 .nav-links {
   color: var(--white);
@@ -228,6 +227,10 @@
     color: #242424;
     transition: 250ms;
   }
+
+  .navbar .btn {
+    display: none;
+  }
 }
 /* ************************************END OF NAVBAR******************************************* */
 
@@ -256,13 +259,16 @@
 }
 
 .btn--medium {
-  padding: 8px 20px;
   font-size: 1rem;
 }
 
 .btn--large {
   padding: 12px 26px;
   font-size: 20px;
+}
+
+.btn-margin-top{
+  padding-top: 1.5rem;
 }
 
 .btn--large:hover,
@@ -380,21 +386,33 @@
 /* SECTION */
 #section_about,
 #section_projects,
-#section_experience {
+#section_experience,
+#section_contact {
   margin: 0 auto;
   padding: 100px 0px;
   max-width: 1000px;
   color: var(--white);
   display: block;
   transition: all 500ms ease-in-out;
+  box-sizing: border-box;
 }
 
-#section_about,
+#section_contact p{
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #section_about,
 #section_projects,
-#section_experience {
+#section_experience{
   padding: 1rem 0.5rem;
 }
 
+.footer{
+  margin: 0;
+}
+
+}
 /* TOPOGRAPHY */
 .heading {
   font-size: var(--fz-xxl);
@@ -415,7 +433,7 @@
   display: flex;
   align-items: baseline;
   text-align: center;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .separator::after {
@@ -436,6 +454,10 @@
 
 .separator:not(:empty)::after {
   margin-left: 0.5em;
+}
+
+.center{
+  text-align: center;
 }
 
 .left-align {
@@ -532,7 +554,7 @@ li::marker {
 
 .card {
   position: relative;
-  margin: 0 1rem 5rem 1rem;
+  margin-bottom: 5rem;
   height: 35vh;
   transition: ease-out 0.3s;
 }
@@ -580,7 +602,6 @@ li::marker {
 }
 
 .card_contents {
-  /* position: absolute; */
   top: 20px;
   left: 20px;
   padding: 20px;
@@ -599,6 +620,21 @@ li::marker {
 @media screen and (max-width: 768px) {
   .card{
     margin: .5rem 0;
+  }
+
+  .card > img {
+    filter: grayscale(0%);
+    background: none;
+    opacity: 0.1;
+  }
+
+  .card:hover{
+    border: 1px solid var(--primary-accent) !important;
+    padding: 0;
+  }
+    
+  .card:hover img{
+    opacity: 0.1 !important;
   }
 
   .card_contents{
@@ -840,6 +876,9 @@ li::marker {
     width: 100%;
     grid-auto-flow: column;
   }
+  .content--img-container{
+    margin-top: 2rem;
+  }
 }
 
 
@@ -923,4 +962,10 @@ li::marker {
 
 .links > a:hover {
   color: var(--primary-accent);
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    margin: 1rem 0;
+  }
 }

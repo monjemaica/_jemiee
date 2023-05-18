@@ -32,12 +32,12 @@ const About = () => {
                         Here are a few Programming Language/ Frameworks I've been working with recently:
                     </p>
                     <ul className="list list--tick list--col2">
-                        <li className="list__item">JavaScript</li>
-                        <li className="list__item">ReactJs</li>
-                        <li className="list__item">Node.js</li>
-                        <li className="list__item">Laravel</li>
-                        <li className="list__item">Angular</li>
-                        <li className="list__item">Ionic</li>
+                        <li className="list__item"><i class="fa-brands fa-square-js"></i> JavaScript</li>
+                        <li className="list__item"><i class="fa-brands fa-react"></i> ReactJs</li>
+                        <li className="list__item"><i class="fa-brands fa-node-js"></i> Node.js</li>
+                        <li className="list__item"><i class="fa-brands fa-laravel"></i> Laravel</li>
+                        <li className="list__item"><i class="fa-brands fa-angular"></i> Angular</li>
+                        <li className="list__item"><i class="fa-duotone fa-circle"></i> Ionic</li>
                     </ul>
                 </div>
             </div>
