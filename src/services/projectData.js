@@ -21,7 +21,7 @@ export const project = [
       project: "Payroll System",
       badge:["C#", "MySQL"],
       img: "../assets/images/projects/project8.jpg",
-      description:"Payroll System is an application of the software that automates the computation and distribution of employee paychecks. As it resolves payment and deduction concerns and digitally records them in its database, the software automatically calculates salaries, tax deductions, incentives, bonuses, salaries, tax deductions, incentives, and bonuses automatically."
+      description:"Payroll System is an application of the software that automates the computation and distribution of employee paychecks. As it resolves payment and deduction concerns and digitally records them in its database, the software automatically calculates salaries, tax deductions, incentives, salaries, and bonuses automatically."
     }
   ];
   
