@@ -8,7 +8,7 @@ export const project = [
       description:"A Web and Mobile-Based Interactive Network Application For Gordon College. GCIAN is a Gordon College-exclusive social media networking platform that allows students to freely communicate and express their opinions, knowledge, and ideas to a broad audience, as well as interact with other student's posts"
     },
     {
-      id: "9d384aae-4f79-4f82-8034-0e77f84a115e",
+      id: "9d384aae-4f79-4f82-8034-0e77f84a115d",
       header: "Featured Project",
       project: "PetSpotShop",
       badge:["ReactJs", "MongoDB", "NodeJs"],
@@ -16,7 +16,7 @@ export const project = [
       description:" PetSpotShop is an e-commerce website designed with pets, services for pet shops, accessories for pet shops, and other products in mind."
     },
     {
-      id: "9d384aae-4f79-4f82-8034-0e77f84a115e",
+      id: "9d384aae-4f79-4f82-8034-0e77f84a115g",
       header: "Featured Project",
       project: "Payroll System",
       badge:["C#", "MySQL"],

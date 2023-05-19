@@ -60,7 +60,7 @@ const Home = () => {
                 <span className="heading">
                     Get In Touch
                 </span>
-                <p >I'm open to any new job opportunities. You can email me anytime! <i class="fa-light fa-message-question "></i></p>
+                <p >I'm open to any new job opportunities. You can email me anytime! <i className="fa-light fa-message-question "></i></p>
                 <div className="btn-margin-top">
                     <a href="mailto:jemaemon04@gmail.com?subject='Hi Jem!'&body='Just popped in to say hello'" className="btn btn--outline btn--medium" >Email Me</a>
                 </div>

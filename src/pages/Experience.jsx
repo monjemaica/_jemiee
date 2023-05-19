@@ -1,10 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Content from "../components/Content";
+import Modal from "../components/Modal";
 import { MouseContext } from "../context/MouseContextProvider";
 import { getCompany } from "../services/companyData";
 
 const Experience = ({ exp, onSelected, isActive }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [img, setImg] = useState('');
+
+    const openImg = (img) => {
+        setIsOpen(true);
+        setImg(img)
+    }
+    
 
     return (
         <>
@@ -30,20 +40,18 @@ const Experience = ({ exp, onSelected, isActive }) => {
                         <Content exp={exp}/>
                     </div>
                     
-                    <div className="content--img-container">
-                        <div className="content--img">
+                    <div className="content--img">
                             {exp.map(res =>
                                 res.img.map((img, i) => 
+                                <div className="content--img" onClick={() => openImg(img)}>
                                     <img key={i} src={img} alt="" />
+                                </div>
                                 )
                             )}
-                        </div>
                     </div>
                 </div>
-
-
             </div>
-
+            {isOpen && <Modal img={img} onClose={setIsOpen}/>}
 
         </>
     );
