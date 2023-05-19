@@ -923,6 +923,14 @@ li::marker {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .square--container:hover {
+    padding: 0;
+    margin-right: 1rem;
+    border: 0.1px solid var(--primary-accent);
+  }
+}
+
 
 /* FOOTER */
 .footer {
