@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
 import About from "./About";
 import Experience from "./Experience";
@@ -6,13 +6,15 @@ import Projects from "./Projects";
 import { getExp } from "../services/experienceData";
 import Footer from "../components/Footer";
 import { getProject } from "../services/projectData";
-
+import { MouseContext } from '../context/MouseContextProvider';
 
 const Home = () => {
     const [exp, setExp] = useState([]);
     const [prj, setPrj] = useState([]);
     const [filter, setFilter] = useState([getExp()[0]]);
     const [active, setActive] = useState("9d384aae-4f79-4f82-8034-0e77f84a115e");
+    const { cursorChangeHandler } = useContext(MouseContext);
+
 
 
     const handleOnSelected = (id) => {
@@ -62,7 +64,8 @@ const Home = () => {
                 </span>
                 <p >I'm open to any new job opportunities. You can email me anytime! <i className="fa-light fa-message-question "></i></p>
                 <div className="btn-margin-top">
-                    <a href="mailto:jemaemon04@gmail.com?subject='Hi Jem!'&body='Just popped in to say hello'" className="btn btn--outline btn--medium" >Email Me</a>
+                    <a href="mailto:jemaemon04@gmail.com?subject='Hi Jem!'&body='Just popped in to say hello'" className="btn btn--outline btn--medium" onMouseEnter={() => cursorChangeHandler("btn-hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")} >Email Me</a>
                 </div>
             </div>
             <Footer />

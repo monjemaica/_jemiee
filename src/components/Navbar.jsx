@@ -53,7 +53,8 @@ const Navbar = () => {
                 </ul>
 
                 {/* {button && <Button buttonStyle="btn--outline" download="test.png"> Resume</Button>} */}
-                <a href='/assets/resume/Jemaica Mae Mon - Resume.pdf' className="btn btn--outline btn--medium" download="Jemaica Mae Mon - Resume.pdf"> Resume</a>
+                <a href='/assets/resume/Jemaica Mae Mon - Resume.pdf' className="btn btn--outline btn--medium" download="Jemaica Mae Mon - Resume.pdf" onMouseEnter={() => cursorChangeHandler("btn-hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")} > Resume</a>
 
 
             </nav>

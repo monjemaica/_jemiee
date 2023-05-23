@@ -29,7 +29,7 @@
   width: 50px;
   height: 50px;
   /* background-color: var(--white); */
-  border: 1px solid var(--secondary-accent-light);
+  border: 1px solid var(--white);
   border-radius: 100%;
   transform: translate(-50%, -50%);
   -webkit-transition-duration: 200ms;
@@ -46,13 +46,13 @@
   left: 50%;
   width: 5px;
   height: 5px;
-  background-color: var(--secondary-accent-light);
+  background-color: var(--white);
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;
 }
-/* below code is used from step6 */
+
 .ring.hovered {
   width: 80px;
   height: 80px;
@@ -62,6 +62,17 @@
 
 .dot.hovered {
   background-color: var(--primary-accent);
+}
+
+.ring.btn-hovered {
+  width: 80px;
+  height: 80px;
+  border-width: 3px;
+  border: 1px solid var(--grey);
+}
+
+.dot.btn-hovered {
+  background-color: var(--grey);
 }
 
 /* NAVBAR */
@@ -332,7 +343,7 @@
 }
 
 .big {
-  font-size: 100px;
+  font-size: 100px; 
 }
 
 .role {

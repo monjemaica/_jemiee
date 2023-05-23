@@ -43,7 +43,8 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     <div className="content--img">
                             {exp.map(res =>
                                 res.img.map((img, i) => 
-                                <div className="content--img" onClick={() => openImg(img)}>
+                                <div className="content--img" onClick={() => openImg(img)} onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}>
                                     <img key={i} src={img} alt="" />
                                 </div>
                                 )
