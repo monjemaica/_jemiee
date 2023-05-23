@@ -8,9 +8,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="links">
-                    <a href="/"><i className="fa-brands fa-facebook"></i></a>
-                    <a href="/"><i className="fa-brands fa-linkedin-in"></i></a>
-                    <a href="/"><i className="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/jejunejemie"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="https://ph.linkedin.com/in/jemaica-mae-mon-6a7845218"><i className="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/monjemaica"><i className="fa-brands fa-github"></i></a>
                 </div>
                 <div className="footer--xxs">&copy;Copyright All rights reserved</div>
             </div>
