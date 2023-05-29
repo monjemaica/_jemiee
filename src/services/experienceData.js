@@ -4,7 +4,7 @@ export const exps = [
     company: "Dunbrae Subic Inc.",
     role: "Full-Stack Engineer",
     description:[
-      "Build API development and automations using Laravel, PHP and MySQL located at Subic Bay Freeport Zone",
+      "Build API development and automations using ReactJS, Laravel, PHP and MySQL located at Subic Bay Freeport Zone",
       "Assist the business in terms of support, enhancement and development of applications and databases, interfaces and data.",
       "Work with all the relevant departments such as Call Centers, Invoicing and Spare Parts to advance research and development to leverage emerging technologies and services.",
       "Provide technical assistance and backup to the support teams to resolve issues impacting on our systems and data availability"
