@@ -517,12 +517,19 @@ a {
   flex: 1 1 35rem;
 }
 
+@media screen and (max-width: 768px) {
+  .about--content {
+    width: 100%;
+  }
+}
+
 /* LISTS */
 
 .list {
   list-style-type: "▹";
   font-size: var(--fz-xs);
   color: var(--secondary-accent);
+  margin: 2rem;
 }
 
 li::marker {
@@ -553,6 +560,14 @@ li::marker {
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .list--col2 {
+    grid-template-columns: repeat(3, minmax(140px, 200px));
   }
 }
 
@@ -901,7 +916,24 @@ li::marker {
   width: 25%;
 }
 .img--lg {
-  width: 40%;
+  width: 50%;
+}
+
+.rectangle--img {
+  flex: 1 1 35rem;
+}
+
+.rectangle--img > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  background: radial-gradient(
+    circle at center,
+    rgb(59, 59, 58),
+    rgb(80, 70, 60) 84%
+  );
+  filter: grayscale(50%);
 }
 
 .square--img {
@@ -909,8 +941,8 @@ li::marker {
 }
 
 .square--img > img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   opacity: 0.5;
   object-fit: cover;
   background: radial-gradient(
@@ -929,17 +961,28 @@ li::marker {
   margin-right: 1rem;
   border: 0.1px solid var(--primary-accent);
 }
-.square--img > img:hover {
+.rectangle--img > img:hover {
   filter: none;
   transition: 500ms;
   opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
-  .square--container:hover {
-    padding: 0;
-    margin-right: 1rem;
+  .square--img>img:hover {
+    filter: none;
+    transition: 500ms;
+    opacity: 1;
     border: 0.1px solid var(--primary-accent);
+  
+  }
+  .square--container{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .square--img{
+    display: none;
   }
 }
 

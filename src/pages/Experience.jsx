@@ -3,18 +3,12 @@ import Content from "../components/Content";
 import Modal from "../components/Modal";
 import { MouseContext } from "../context/MouseContextProvider";
 import { getCompany } from "../services/companyData";
+import useModal from "../hooks/useModal";
 
 const Experience = ({ exp, onSelected, isActive }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [img, setImg] = useState('');
-
-    const openImg = (img) => {
-        setIsOpen(true);
-        setImg(img)
-    }
-    
+    const {isOpen, img, setIsOpen, setImg, openImg} = useModal();
 
     return (
         <>

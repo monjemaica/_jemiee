@@ -1,14 +1,17 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContextProvider";
 import { SiIonic } from 'react-icons/si'
+import useModal from "../hooks/useModal";
+import Modal from "../components/Modal";
 
 const About = () => {
     const { cursorChangeHandler } = useContext(MouseContext);
+    const {isOpen, img, setIsOpen, setImg, openImg} = useModal();
     return (
         <>
             <div className="box-container ">
                 <div className="square--container img--md" onMouseEnter={() => cursorChangeHandler("hovered")} onMouseLeave={() => cursorChangeHandler("")}>
-                    <div className="square--img">
+                    <div className="rectangle--img" >
                         <img src="../assets/images/img-dp.jpg" alt="" />
                     </div>
                 </div>
@@ -21,7 +24,7 @@ const About = () => {
                         </span>
                     </div>
                     <p className="about--paragraph">
-                    Mabuhay! I'm Jem, a passionate and dedicated Full-Stack developer located in Olongapo City, Philippines, who creates stuff for the Internet. Using ReactJs, TypeScript, Angular Framework, and Ionic, I have created a variety of APIs, websites, and mobile apps. However, I discovered that I was more intrigued with MERN stack development.
+                        Mabuhay! I'm Jem, a passionate and dedicated Full-Stack developer located in Olongapo City, Philippines, who creates stuff for the Internet. Using ReactJs, TypeScript, Angular Framework, and Ionic, I have created a variety of APIs, websites, and mobile apps. However, I discovered that I was more intrigued with MERN stack development.
 
                     </p>
                     <p className="about--paragraph">
@@ -37,11 +40,15 @@ const About = () => {
                         <li className="list__item"><i className="fa-brands fa-node-js"></i> Node.js</li>
                         <li className="list__item"><i className="fa-brands fa-laravel"></i> Laravel</li>
                         <li className="list__item"><i className="fa-brands fa-angular"></i> Angular</li>
-                        <li className="list__item"><SiIonic/> Ionic</li>
+                        <li className="list__item"><SiIonic /> Ionic</li>
                     </ul>
+                    <div className="square--img center"  onClick={() => openImg('../assets/images/img-dp.jpg')}  onMouseEnter={() => cursorChangeHandler("hovered")} onMouseLeave={() => cursorChangeHandler("")}>
+                            <img src="../assets/images/img-dp.jpg" alt="" />
+                    </div>
                 </div>
-            </div>
 
+            </div>
+            {isOpen && <Modal img={img} onClose={setIsOpen}/>}
         </>
     );
 }
