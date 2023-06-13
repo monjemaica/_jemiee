@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContextProvider";
+import { SiIonic } from 'react-icons/si'
 
 const About = () => {
     const { cursorChangeHandler } = useContext(MouseContext);
@@ -20,16 +21,15 @@ const About = () => {
                         </span>
                     </div>
                     <p className="about--paragraph">
-                        Mabuhay! I'm Jem, a passionate and dedicated Full-Stack developer that build things in internet
-                        based in Olongapo City, Philippines. I have developed many types of API development, Websites and
-                        Mobile Apps using ReactJs and Angular Framework and Ionic.
+                    Mabuhay! I'm Jem, a passionate and dedicated Full-Stack developer located in Olongapo City, Philippines, who creates stuff for the Internet. Using ReactJs, TypeScript, Angular Framework, and Ionic, I have created a variety of APIs, websites, and mobile apps. However, I discovered that I was more intrigued with MERN stack development.
+
                     </p>
                     <p className="about--paragraph">
                         Interested in the entire developement of backend and working on ambitious projects with positive people.
                     </p>
 
                     <p className="about--paragraph">
-                        Here are a few Programming Language/ Frameworks I've been working with recently:
+                        Here are a few Programming Language/ Frameworks / Libraries I've been working with recently:
                     </p>
                     <ul className="list list--tick list--col2">
                         <li className="list__item"><i className="fa-brands fa-square-js"></i> JavaScript</li>
@@ -37,7 +37,7 @@ const About = () => {
                         <li className="list__item"><i className="fa-brands fa-node-js"></i> Node.js</li>
                         <li className="list__item"><i className="fa-brands fa-laravel"></i> Laravel</li>
                         <li className="list__item"><i className="fa-brands fa-angular"></i> Angular</li>
-                        <li className="list__item"><i className="fa-duotone fa-circle"></i> Ionic</li>
+                        <li className="list__item"><SiIonic/> Ionic</li>
                     </ul>
                 </div>
             </div>
