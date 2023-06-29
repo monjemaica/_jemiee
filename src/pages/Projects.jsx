@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContextProvider";
+import { useNavigate } from "react-router-dom";
 
 const Projects = ({ prj }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
+    const location = useNavigate()
 
     return (
         <>
@@ -15,7 +17,7 @@ const Projects = ({ prj }) => {
 
                 <div className="card_container">
             {prj.map(p =>
-                    <div className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
+                    <div onClick={() => location(`/project/${p.project}`)} className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
 
                         <img src={p.img} alt=""/>

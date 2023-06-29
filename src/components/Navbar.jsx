@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import '../styles.css';
 import { MouseContext } from '../context/MouseContextProvider';
 
@@ -22,9 +22,9 @@ const Navbar = () => {
                 <div className="navbar-container" onMouseEnter={() => cursorChangeHandler("hovered")}
                     onMouseLeave={() => cursorChangeHandler("")}>
 
-                    <Link to="/" className={"navbar-logo"}>
+                    <a href="/" className={"navbar-logo"}>
                     <i className="fa-solid fa-code"></i>
-                    </Link>
+                    </a>
                 </div>
                 <div className="menu-icon" onClick={handleClick} onMouseEnter={() => cursorChangeHandler("hovered")}
                     onMouseLeave={() => cursorChangeHandler("")}>
@@ -34,21 +34,30 @@ const Navbar = () => {
                     onMouseLeave={() => cursorChangeHandler("")}>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        <a href='#section_about' className='nav-links' onClick={closeMobileMenu}>
+                        {/* <a href='#section_about' className='nav-links' onClick={closeMobileMenu}>
                             About
-                        </a>
+                        </a> */}
+                        <Link to="section_about" className={"nav-links"} onClick={closeMobileMenu}>
+                            About
+                        </Link>
                     </li>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
+                        {/* <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
                             Projects
-                        </a>
+                        </a> */}
+                        <Link to="section_projects" className={"nav-links"} onClick={closeMobileMenu}>
+                            Projects
+                        </Link>
                     </li>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
+                        {/* <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
                             Experience
-                        </a>
+                        </a> */}
+                        <Link to="section_experience" className={"nav-links"} onClick={closeMobileMenu}>
+                            Experience
+                        </Link>
                     </li>
                 </ul>
 
