@@ -34,34 +34,24 @@ const Navbar = () => {
                     onMouseLeave={() => cursorChangeHandler("")}>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        {/* <a href='#section_about' className='nav-links' onClick={closeMobileMenu}>
-                            About
-                        </a> */}
                         <Link to="section_about" className={"nav-links"} onClick={closeMobileMenu}>
                             About
                         </Link>
                     </li>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        {/* <a href='#section_projects' className='nav-links' onClick={closeMobileMenu}>
-                            Projects
-                        </a> */}
                         <Link to="section_projects" className={"nav-links"} onClick={closeMobileMenu}>
                             Projects
                         </Link>
                     </li>
                     <li className="nav-item" onMouseEnter={() => cursorChangeHandler("hovered")}
                         onMouseLeave={() => cursorChangeHandler("")}>
-                        {/* <a href='#section_experience' className='nav-links' onClick={closeMobileMenu}>
-                            Experience
-                        </a> */}
                         <Link to="section_experience" className={"nav-links"} onClick={closeMobileMenu}>
                             Experience
                         </Link>
                     </li>
                 </ul>
 
-                {/* {button && <Button buttonStyle="btn--outline" download="test.png"> Resume</Button>} */}
                 <a href='/assets/resume/Jemaica Mae Mon - Resume.pdf' className="btn btn--outline btn--medium" download="Jemaica Mae Mon - Resume.pdf" onMouseEnter={() => cursorChangeHandler("btn-hovered")}
                     onMouseLeave={() => cursorChangeHandler("")} > Resume</a>
 

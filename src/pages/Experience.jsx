@@ -21,7 +21,7 @@ const Experience = ({ exp, onSelected, isActive }) => {
             <div className="grid-container grid-1">
                 <div>
                     <ul className="list-group">
-                        {getCompany().map(e =>
+                        {getCompany().map((e)=>
                             <li key={e.id} onClick={() => onSelected(e.id)} className={isActive === e.id ? "list--item active" : "list--item"} onMouseEnter={() => cursorChangeHandler("hovered")}
                                 onMouseLeave={() => cursorChangeHandler("")}>
                                 {e.company}
@@ -37,9 +37,9 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     <div className="content--img">
                             {exp.map(res =>
                                 res.img.map((img, i) => 
-                                <div className="content--img" onClick={() => openImg(img)} onMouseEnter={() => cursorChangeHandler("hovered")}
+                                <div key={i} className="content--img" onClick={() => openImg(img)} onMouseEnter={() => cursorChangeHandler("hovered")}
                                 onMouseLeave={() => cursorChangeHandler("")}>
-                                    <img key={i} src={img} alt="" />
+                                    <img src={img} alt="" />
                                 </div>
                                 )
                             )}

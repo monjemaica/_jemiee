@@ -5,7 +5,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import { getExp } from "../services/experienceData";
 import Footer from "../components/Footer";
-import { getProject } from "../services/projectData";
+import { getProjects } from "../services/projectData";
 import { MouseContext } from '../context/MouseContextProvider';
 
 const Home = () => {
@@ -33,7 +33,7 @@ const Home = () => {
             setExp(res);
         }
         const doGetPrj = async () => {
-            const res = await getProject();
+            const res = await getProjects();
             setPrj(res);
         }
 

@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContextProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Projects = ({ prj }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
-    const location = useNavigate()
+    // const location = useNavigate()
 
     return (
         <>
@@ -15,35 +15,35 @@ const Projects = ({ prj }) => {
                 </span>
             </div>
 
-                <div className="card_container">
-            {prj.map(p =>
-                    <div onClick={() => location(`/project/${p.project}`)} className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
-                        onMouseLeave={() => cursorChangeHandler("")}>
+            <div className="card_container">
+                {prj.map(p =>
+                    <Link key={p.id} to={`/project/${p.id}`}>
 
-                        <img src={p.img} alt=""/>
-                        <div className="card_contents">
+                        <div className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
+                            onMouseLeave={() => cursorChangeHandler("")}>
 
-                            <div className="card_header">
-                                {p.header}
-                                <h2>{p.project}</h2>
-                            </div>
-                            <div className="card_body">
-                                <p>{p.description}</p>
-                                <div className="badge--container">
-                                    {p.badge.map((b, i) => 
-                                        <span key={i} className="badge badge--primary badge--small">{b}</span>
-                                    )}
+                            <img src={p.img} alt="" />
+                            <div className="card_contents">
+
+                                <div className="card_header">
+                                    {p.header}
+                                    <h2>{p.project}</h2>
+                                </div>
+                                <div className="card_body">
+                                    <p>{p.description}</p>
+
+                                    <div className="badge--container">
+                                        {p.badge.map((b, i) =>
+                                            <span key={i} className="badge badge--primary badge--small">{b}</span>
+                                        )}
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-            )}
-                </div>
-               
-
-
-
+                    </Link>
+                )}
+            </div>
         </>
     );
 }

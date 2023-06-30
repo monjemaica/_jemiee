@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import { WithNav } from "./components/WithNav";
+import { WithoutNav } from "./components/WithoutNav";
 
 class App extends Component {
   render() {
@@ -20,8 +21,8 @@ class App extends Component {
               <Route path="/" exact element={<Home />} />
             </Route>
 
-            <Route>
-              <Route path="/project/:name" element={<ProjectDetails />} />
+            <Route element={<WithoutNav />}>
+              <Route path="/project/:id" element={<ProjectDetails />} />
             </Route>
             
           </Routes>
