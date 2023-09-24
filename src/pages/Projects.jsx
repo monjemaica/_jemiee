@@ -19,7 +19,7 @@ const Projects = ({ prj }) => {
                 {prj.map(p =>
                     <div onClick={() => location(`/project/${p.id}`)} className="card grid-container grid-2" onMouseEnter={() => cursorChangeHandler("hovered")}
                     onMouseLeave={() => cursorChangeHandler("")}>
-                        <img src={p.img} alt="" />
+                        <img src={p.img} loading="lazy" alt="" />
                         <div className="card_contents">
 
                             <div className="card_header">

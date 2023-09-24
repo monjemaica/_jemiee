@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useModal = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ const useModal = () => {
         setIsOpen(true);
         setImg(img)
     }
-    
+      
   return{isOpen, img, setIsOpen, setImg, openImg};
 }
 

@@ -4,6 +4,7 @@ import Modal from "../components/Modal";
 import { MouseContext } from "../context/MouseContextProvider";
 import { getCompany } from "../services/companyData";
 import useModal from "../hooks/useModal";
+import { ImageLoadExp } from "./ImageLoadExp";
 
 const Experience = ({ exp, onSelected, isActive }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
@@ -37,10 +38,7 @@ const Experience = ({ exp, onSelected, isActive }) => {
                     <div className="content--img">
                             {exp.map(res =>
                                 res.img.map((img, i) => 
-                                <div key={i} className="content--img" onClick={() => openImg(img)} onMouseEnter={() => cursorChangeHandler("hovered")}
-                                onMouseLeave={() => cursorChangeHandler("")}>
-                                    <img src={img} alt="" />
-                                </div>
+                               <ImageLoadExp src={img} i={i} openImg={openImg} cursorChangeHandler={cursorChangeHandler}/>
                                 )
                             )}
                     </div>

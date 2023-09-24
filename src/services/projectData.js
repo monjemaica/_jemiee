@@ -9,10 +9,10 @@ export const project = [
     img: "../assets/images/projects/project1.jpg",
     imgs: [
       "../assets/images/projects/project1.jpg",
-      "../assets/images/projects/enter chatroom.png",
-      "../assets/images/projects/edit button in profile.png",
-      "../assets/images/projects/login.png",
-      "../assets/images/projects/chatroom message.png",
+      "../assets/images/projects/enterChatroom.jpg",
+      "../assets/images/projects/editButtonInProfile.jpg",
+      "../assets/images/projects/login.jpg",
+      "../assets/images/projects/chatroomMessage.jpg",
     ],
     description:
       "A Web and Mobile-Based Interactive Network Application For Gordon College. GCIAN is a Gordon College-exclusive social media networking platform that allows students to freely communicate and express their opinions, knowledge, and ideas to a broad audience, as well as interact with other student's posts.",
@@ -27,10 +27,10 @@ export const project = [
     img: "../assets/images/projects/project7.jpg",
     imgs: [
       "../assets/images/projects/project7.jpg",
-      "../assets/images/projects/order details.jpg",
-      "../assets/images/projects/paypal page.jpg",
-      "../assets/images/projects/home page.png",
-      "../assets/images/projects/admin shop.jpg",
+      "../assets/images/projects/orderDetails.jpg",
+      "../assets/images/projects/paypalPage.jpg",
+      "../assets/images/projects/homePage.jpg",
+      "../assets/images/projects/adminShop.jpg",
     ],
     description:
       " PetSpotShop is an e-commerce website designed with pets, services for pet shops, accessories for pet shops, and other products in mind. The platform is an e-commerce website designed with pets, pet store services, pet store supplies, and other products in mind.",

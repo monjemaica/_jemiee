@@ -4,6 +4,7 @@ import { getProject } from '../services/projectData';
 import useModal from '../hooks/useModal';
 import { MouseContext } from '../context/MouseContextProvider';
 import Modal from '../components/Modal';
+import ImageLoad from './ImageLoad';
 
 export const ProjectDetails = () => {
   const navigate = useNavigate();
@@ -12,6 +13,8 @@ export const ProjectDetails = () => {
 
   const { cursorChangeHandler } = useContext(MouseContext);
   const {isOpen, img, setIsOpen, setImg, openImg} = useModal();
+
+
   return (
     <>
       <div className=" project grid-container grid-3">
@@ -56,13 +59,13 @@ export const ProjectDetails = () => {
         </div>
         <div className="project--img">
           {item.imgs.map(e =>
-            <img src={e} alt=""  onClick={() => openImg(e)} onMouseEnter={() => cursorChangeHandler("hovered")}
-            onMouseLeave={() => cursorChangeHandler("")}/>
+            <ImageLoad src={e} openImg={openImg} />
+         
           )}
 
         </div>
       </div>
-      {isOpen && <Modal img={img} onClose={setIsOpen}/>}
+      {isOpen && <Modal img={img} onClose={setIsOpen} cursorChangeHandler={cursorChangeHandler}/>}
     </>
   )
 }
