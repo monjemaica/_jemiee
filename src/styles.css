@@ -948,14 +948,18 @@ li::marker {
 }
 
 /* .project--img :hover{
-  border: 1px solid var(--primary-accent);
+  border: 1px solid var(--primary-accent); 
   padding: 0.3rem;
 } */
 
 .blur-load {
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center ;
   filter: blur(10px);
+}
+.blur-load img{
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
 .blur-load::before {
@@ -965,6 +969,15 @@ li::marker {
   opacity: 0;
   animation: pulse 2.5s infinite;
   background-color: white;
+}
+
+.img-loaded::before{
+  animation: none;
+  content: none;
+}
+
+.img-loaded img{
+  opacity: 1;
 }
 
 @keyframes pulse {

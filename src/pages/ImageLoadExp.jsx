@@ -20,7 +20,7 @@ export const ImageLoadExp = ({src, i, openImg, cursorChangeHandler}) => {
           <img src={src} loading='lazy' alt="" />
       </div>
       :
-      <div key={i} className="content--img" onClick={() => openImg(src)} onMouseEnter={() => cursorChangeHandler("hovered")}
+      <div key={i} className="content--img img-loaded" onClick={() => openImg(src)} onMouseEnter={() => cursorChangeHandler("hovered")}
       onMouseLeave={() => cursorChangeHandler("")}>
           <img src={src} loading='lazy' alt="" />
       </div>}

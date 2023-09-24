@@ -20,7 +20,7 @@ export default function ImageLoad({src, openImg, cursorChangeHandler}) {
             <img src={src} loading='lazy' alt=""  onClick={() => openImg(src)} onMouseEnter={() => cursorChangeHandler("hovered")}
             onMouseLeave={() => cursorChangeHandler("")}/>
           </div>: 
-          <img src={src} loading='lazy' alt=""  onClick={() => openImg(src)} onMouseEnter={() => cursorChangeHandler("hovered")}
+          <img className='img-loaded' src={src} loading='lazy' alt=""  onClick={() => openImg(src)} onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}/>
           }
         </>
